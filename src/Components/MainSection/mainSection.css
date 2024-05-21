@@ -45,7 +45,7 @@ nav.open {
 }
 
 .left-main-section .desc {
-    width: 499px;
+    width: 490px;
     color:#000000;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -77,4 +77,19 @@ nav.open {
 .right-main-section img{
     padding-top: 30px;
     width: 630px;
+}
+
+
+/* ukuran mobile */
+@media screen and (max-width: 768px) {
+    .main-section-wrapper{
+        padding-top: 70px;
+    }
+
+    .main-section-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px 0px 0px;
+        padding-left: 20px;
+    }
 }
