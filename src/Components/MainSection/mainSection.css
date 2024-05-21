@@ -1,25 +1,80 @@
-.main-section-container {
-    height: 100vh;
+/* Efek blur saat menu hamburger dibuka */
+.blur {
+    filter: blur(5px);
+    /* Sesuaikan dengan tingkat blur yang diinginkan */
+}
+
+/* Tampilan menu hamburger saat terbuka */
+nav {
+    display: none;
+}
+
+nav.open {
+    display: block;
+    /* Tambahkan gaya untuk menu terbuka di sini */
+}
+
+
+
+
+.main-section-wrapper {
+    padding-top: 120px;
     background-color: #F1F3FF;
 }
 
-.title {
-    font-size: 30px;
-    color: red;
-    padding-top: 100px;
+.main-section-container {
+    display: flex;
+    gap: 30px;
+    margin: 0px 0px 0px 190px;
 }
 
-/* Efek blur saat menu hamburger dibuka */
-.blur {
-    filter: blur(5px); /* Sesuaikan dengan tingkat blur yang diinginkan */
-  }
-  
-  /* Tampilan menu hamburger saat terbuka */
-  nav {
-    display: none;
-  }
-  
-  nav.open {
-    display: block;
-    /* Tambahkan gaya untuk menu terbuka di sini */
-  }
+.left-main-section {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-main-section .title {
+    font-size: 30px;
+    color:#000000;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.left-main-section .desc {
+    width: 499px;
+    color:#000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.left-main-section .btn {
+    width: 140px;
+    height: 36px;
+    background-color: #5CB85F;
+    border: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px, 12px, 8px, 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500; 
+}
+
+.left-main-section .btn:hover {
+    background-color: #2E8B57;
+}
+
+.right-main-section img{
+    padding-top: 30px;
+    width: 630px;
+}
