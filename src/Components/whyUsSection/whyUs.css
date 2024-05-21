@@ -43,3 +43,19 @@
     line-height: 24px;
     font-size: 15px;
 }
+
+@media screen and (max-width: 768px) {
+    .whyUs-card-wrapper {
+        flex-direction: column;
+    }
+
+    .why-us-container {
+        margin-left: 0;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .whyUs-card {
+        width: 445px;
+    }
+}
