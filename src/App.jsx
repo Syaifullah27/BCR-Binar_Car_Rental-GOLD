@@ -4,6 +4,7 @@ import MainSection from './Components/MainSection'
 import Navbar from './Components/Navbar'
 import SecondSection from './Components/SecondSection'
 import WhyUsSection from './Components/whyUsSection'
+import TestimoniSection from './Components/testimoniSection'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -27,6 +28,7 @@ const App = () => {
       <MainSection isOpen={isMenuOpen}/>
       <SecondSection isOpen={isMenuOpen}/>
       <WhyUsSection isOpen={isMenuOpen}/>
+      <TestimoniSection isOpen={isMenuOpen}/>
     </div>
   )
 }
