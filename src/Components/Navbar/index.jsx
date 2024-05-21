@@ -1,8 +1,11 @@
-
 import './navbar.css'
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({isOpen, toggleMenu,}) => {
+
+    // klik diluar menu hamburger maka menu ditutup
+    
+    
 
     return (
         <div className="navbar-wrapper">
