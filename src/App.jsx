@@ -22,7 +22,7 @@ const App = () => {
     <div className="App" onClick={closeMenu}>
       <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setValue={setIsMenuOpen}/>
       <MainSection isOpen={isMenuOpen}/>
-      <SecondSection/>
+      <SecondSection isOpen={isMenuOpen}/>
     </div>
   )
 }

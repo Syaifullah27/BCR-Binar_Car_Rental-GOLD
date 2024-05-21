@@ -10,7 +10,7 @@ const Navbar = ({isOpen, toggleMenu,}) => {
     return (
         <div className="navbar-wrapper">
             <nav className="navbar">
-                <h2>SYH OFFICIAL</h2>
+                <h2 className={`${isOpen ? 'blur' : ''}`}>SYH OFFICIAL</h2>
                 <div className="menu-toggle" onClick={toggleMenu}>
                     <input type="checkbox" />
                     <span></span>
