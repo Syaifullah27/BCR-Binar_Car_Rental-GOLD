@@ -47,6 +47,10 @@
     font-size: 0.8em;
 }
 
+.navbar a:hover {
+    color: rgb(73, 73, 73);
+}
+
 /*hamburger bar*/
 .menu-toggle {
     display: none;
@@ -142,7 +146,7 @@
         padding-top: 55px;
         gap: 20px;
         /* justify-content: space-evenly; */
-        background-color: rgb(129, 121, 97);
+        background-color: rgb(255, 255, 255);
         transition: .5s all ease;
     }
 

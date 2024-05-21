@@ -1,0 +1,25 @@
+.main-section-container {
+    height: 100vh;
+    background-color: #F1F3FF;
+}
+
+.title {
+    font-size: 30px;
+    color: red;
+    padding-top: 100px;
+}
+
+/* Efek blur saat menu hamburger dibuka */
+.blur {
+    filter: blur(5px); /* Sesuaikan dengan tingkat blur yang diinginkan */
+  }
+  
+  /* Tampilan menu hamburger saat terbuka */
+  nav {
+    display: none;
+  }
+  
+  nav.open {
+    display: block;
+    /* Tambahkan gaya untuk menu terbuka di sini */
+  }
