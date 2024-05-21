@@ -6,16 +6,24 @@ import SecondSection from './Components/SecondSection'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  // tutup kembali jika menu jika klik diluar menu
+  const closeMenu = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false)
+    }
+  }
+
   return (
-    <>
-      <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu}/>
+    <div className="App" onClick={closeMenu}>
+      <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setValue={setIsMenuOpen}/>
       <MainSection isOpen={isMenuOpen}/>
-      <SecondSection />
-    </>
+      <SecondSection/>
+    </div>
   )
 }
 
