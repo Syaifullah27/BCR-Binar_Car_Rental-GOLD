@@ -20,12 +20,15 @@ nav.open {
 .main-section-wrapper {
     padding-top: 120px;
     background-color: #F1F3FF;
+    display: flex;
+    justify-content: end;
 }
 
 .main-section-container {
     display: flex;
     gap: 30px;
-    margin: 0px 0px 0px 190px;
+    max-width: 1175px;
+    overflow: hidden;
 }
 
 .left-main-section {
@@ -76,20 +79,31 @@ nav.open {
 
 .right-main-section img{
     padding-top: 30px;
-    width: 630px;
+    width: 665px;
 }
 
 
 /* ukuran mobile */
 @media screen and (max-width: 768px) {
     .main-section-wrapper{
-        padding-top: 70px;
+        padding-top: 45px;
     }
 
+    .left-main-section .title {
+        width: 90%;
+    }
+
+    .left-main-section .desc {
+        width: 90%;
+    }
     .main-section-container {
         flex-direction: column;
         align-items: center;
         margin: 0px 0px 0px 0px;
         padding-left: 20px;
+    }
+
+    .right-main-section img {
+        width: 100%;
     }
 }
