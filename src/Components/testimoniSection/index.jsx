@@ -3,7 +3,12 @@ import "./testimoni.css"
 const TestimoniSection = ({ isOpen }) => {
     return (
         <div className={`${isOpen ? 'blur' : ''}`}>
-            <h1>Testimoni</h1>
+            <div className="testimoni-wrapper">
+                <div className="testimoni-container">
+                    <h1>Testimonial</h1>
+                    <p>Berbagai review positif dari para pelanggan kami</p>
+                </div>
+            </div>
         </div>
     )
 }
