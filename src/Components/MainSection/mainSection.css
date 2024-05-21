@@ -95,6 +95,7 @@ nav.open {
 @media screen and (max-width: 768px) {
     .main-section-wrapper{
         padding-top: 45px;
+        height: 100%;
     }
 
     .left-main-section .title {
