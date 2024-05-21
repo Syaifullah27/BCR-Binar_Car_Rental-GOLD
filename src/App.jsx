@@ -13,15 +13,17 @@ const App = () => {
   }
 
   // tutup kembali jika menu jika klik diluar menu
-  const closeMenu = () => {
-    if (isMenuOpen) {
-      setIsMenuOpen(false)
-    }
-  }
+  // const closeMenu = () => {
+  //   if (isMenuOpen) {
+  //     setIsMenuOpen(false)
+      
+  //   }
+  // }
 
   return (
-    <div className="App" onClick={closeMenu}>
-      <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setValue={setIsMenuOpen}/>
+    // <div className="App" onClick={closeMenu}>
+    <div>
+      <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen}/>
       <MainSection isOpen={isMenuOpen}/>
       <SecondSection isOpen={isMenuOpen}/>
       <WhyUsSection isOpen={isMenuOpen}/>
