@@ -3,6 +3,7 @@ import './App.css'
 import MainSection from './Components/MainSection'
 import Navbar from './Components/Navbar'
 import SecondSection from './Components/SecondSection'
+import WhyUsSection from './Components/whyUsSection'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,6 +24,7 @@ const App = () => {
       <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setValue={setIsMenuOpen}/>
       <MainSection isOpen={isMenuOpen}/>
       <SecondSection isOpen={isMenuOpen}/>
+      <WhyUsSection isOpen={isMenuOpen}/>
     </div>
   )
 }
