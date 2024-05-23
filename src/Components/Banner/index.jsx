@@ -1,8 +1,9 @@
 import "./banner.css"
 import Button from "../Component/Button/Button"
-const Banner = () => {
+// eslint-disable-next-line react/prop-types
+const Banner = ({ isOpen }) => {
     return (
-        <div className="banner-wrapper">
+        <div className={"banner-wrapper" + (isOpen ? " blur" : "")}>
             <div className="banner-container">
                 <div className="banner-text">
                     <h1>Sewa Mobil di (Lokasimu) Sekarang</h1>
