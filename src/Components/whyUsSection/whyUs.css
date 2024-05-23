@@ -56,9 +56,11 @@
         margin-left: 0;
         align-items: center;
         margin-bottom: 50px;
+        padding: 20px;
     }
 
     .whyUs-card {
-        width: 445px;
+        width:  100%;
+        
     }
 }
