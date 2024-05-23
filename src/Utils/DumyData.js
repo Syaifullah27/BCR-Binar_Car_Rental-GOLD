@@ -43,11 +43,32 @@ export const dataTestimoni = [
     },
     {
         id: 3,
-        img: "./images/images.jpeg",
-        title: "SYH 19, Ngawi",
+        img: "./images/gozali.jpg",
+        title: "Ghozali 39, Tangerang",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
         rate: "./images/Rate.png",
-    }
+    },
+    {
+        id: 4,
+        img: "./images/simanjutak.jpg",
+        title: "Dicky Simorangkir 40, Medan",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        rate: "./images/Rate.png",
+    },
+    {
+        id: 5,
+        img: "./images/jhony_.jpg",
+        title: "Jimmy Sinis 24, Palembang",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        rate: "./images/Rate.png",
+    },
+    {
+        id: 6,
+        img: "./images/cwek.jpg",
+        title: "Rissa 21 , Jakarta",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        rate: "./images/Rate.png",
+    },
 ]
 
 export const dataServices = [

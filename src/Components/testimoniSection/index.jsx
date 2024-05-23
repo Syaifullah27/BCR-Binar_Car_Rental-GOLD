@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import "./testimoni.css"
-// import { dataTestimoni } from "../../Utils/DumyData";
+import { dataTestimoni } from "../../Utils/DumyData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -9,28 +9,27 @@ import Slider from "react-slick";
 
 function SampleNextArrow(props) {
     // eslint-disable-next-line react/prop-types
-    const { onClick } = props;
+    const { className, style, onClick } = props;
     return (
-        <div
-            className="next-arrow"
-            onClick={onClick}>
-                <p style={{ fontSize: "32px",fontWeight: "bolder"}}>&#65125;</p>
-            </div>
+      <div
+        className={className}
+        style={{ ...style,marginRight:"20px", background: "black",  }}
+        onClick={onClick}
+      />
     );
-}
-
-function SamplePrevArrow(props) {
+  }
+  
+  function SamplePrevArrow(props) {
     // eslint-disable-next-line react/prop-types
-    const { onClick } = props;
+    const { className, style, onClick } = props;
     return (
-        <div
-            className="prev-arrow"
-            onClick={onClick}>
-                <p style={{ fontSize: "32px",fontWeight: "bolder"}}>&#65124;</p>
-            </div>
+      <div
+        className={className}
+        style={{ ...style, marginLeft:"20px",zIndex: 1, backgroundColor: "black",  }}
+        onClick={onClick}
+      />
     );
-}
-
+  }
 
 
 
@@ -38,8 +37,8 @@ function SamplePrevArrow(props) {
 // eslint-disable-next-line react/prop-types
 const TestimoniSection = ({ isOpen }) => {
     const settings = {
-        infinite: false,
-        speed: 1000,
+        infinite: true,
+        speed: 600,
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
@@ -78,48 +77,22 @@ const TestimoniSection = ({ isOpen }) => {
             <div className="testimoni-container">
                 <h1>Testimonial</h1>
                 <p>What our customers are saying</p>
-                <div className="slider-container">
-                    <Slider {...settings} >
-                        <div className="testimoni-card">
-                            <img src="./images/images.jpeg" alt="" />
-                            <div className="testimoni-card-desc">
-                                <img src="./images/Rate.png" alt="rate" />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, facere.</p>
-                                <h3>John Doe</h3>
-                            </div>
-                        </div>
-                        <div className="testimoni-card">
-                        <img src="./images/images.jpeg" alt="" />
-                            <div className="testimoni-card-desc">
-                                <img src="./images/Rate.png" alt="rate" />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, facere.</p>
-                                <h3>John Doe</h3>
-                            </div>
-                        </div>
-                        <div className="testimoni-card">
-                        <img src="./images/images.jpeg" alt="" />
-                            <div className="testimoni-card-desc">
-                                <img src="./images/Rate.png" alt="rate" />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, facere.</p>
-                                <h3>John Doe</h3>
-                            </div>
-                        </div>
-                        <div className="testimoni-card">
-                        <img src="./images/images.jpeg" alt="" />
-                            <div className="testimoni-card-desc">
-                                <img src="./images/Rate.png" alt="rate" />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, facere.</p>
-                                <h3>John Doe</h3>
-                            </div>
-                        </div>
-                        <div className="testimoni-card">
-                        <img src="./images/images.jpeg" alt="" />
-                            <div className="testimoni-card-desc">
-                                <img src="./images/Rate.png" alt="rate" />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, facere.</p>
-                                <h3>John Doe</h3>
-                            </div>
-                        </div>
+                <div className="testimoni-card-container">
+                    <Slider {...settings}>
+                    {
+                        dataTestimoni.map((data) => {
+                            return (
+                                <div className="testimoni-card" key={data.id}>
+                                    <img src={data.img} alt="testimoni-img" />
+                                        <div className="card-list">
+                                            <img src={data.rate} alt="" />
+                                            <p>"{data.desc}"</p>
+                                            <h4>{data.title}</h4>
+                                        </div>
+                                </div>
+                            )
+                        })
+                    }
                     </Slider>
                 </div>
             </div>
