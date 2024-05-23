@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar'
 import SecondSection from './Components/SecondSection'
 import WhyUsSection from './Components/whyUsSection'
 import TestimoniSection from './Components/testimoniSection'
+import Banner from './Components/Banner'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -29,6 +30,7 @@ const App = () => {
       <SecondSection isOpen={isMenuOpen}/>
       <WhyUsSection isOpen={isMenuOpen}/>
       <TestimoniSection isOpen={isMenuOpen}/>
+      <Banner isOpen={isMenuOpen}/>
     </div>
   )
 }

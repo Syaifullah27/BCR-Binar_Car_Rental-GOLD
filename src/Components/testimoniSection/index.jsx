@@ -39,6 +39,7 @@ const TestimoniSection = ({ isOpen }) => {
     const settings = {
         infinite: true,
         speed: 600,
+        dots: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
@@ -76,7 +77,7 @@ const TestimoniSection = ({ isOpen }) => {
         <div className={`${isOpen ? 'blur' : ''}`}>
             <div className="testimoni-container">
                 <h1>Testimonial</h1>
-                <p>What our customers are saying</p>
+                <p>Berbagai review positif dari para pelanggan kami</p>
                 <div className="testimoni-card-container">
                     <Slider {...settings}>
                     {
