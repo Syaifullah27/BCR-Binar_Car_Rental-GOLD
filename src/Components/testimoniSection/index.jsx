@@ -1,31 +1,10 @@
 import { useState } from "react";
 import "./testimoni.css"
+import { dataTestimoni } from "../../Utils/DumyData";
 // eslint-disable-next-line react/prop-types
 const TestimoniSection = ({ isOpen }) => {
 
-    const dataTestimoni = [
-        {
-            id: 1,
-            img: "./images/img_photo.png",
-            title: "John Dee 32, Bromo",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
-            rate: "./images/Rate.png",
-        },
-        {
-            id: 2,
-            img: "./images/user-2.png",
-            title: "Julie anderson 25, Lamongan",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
-            rate: "./images/Rate.png",
-        },
-        {
-            id: 3,
-            img: "./images/images.jpeg",
-            title: "SYH 19, Ngawi",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
-            rate: "./images/Rate.png",
-        }
-    ]
+    
 
         const [currentIndex, setCurrentIndex] = useState(0);
 

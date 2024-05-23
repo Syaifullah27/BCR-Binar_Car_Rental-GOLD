@@ -1,28 +1,8 @@
 import "./secondSection.css"
+import { dataServices } from "../../Utils/DumyData";
 // eslint-disable-next-line react/prop-types
 const SecondSection = ({ isOpen }) => {
-    const dataServices = [
-        {
-            id: 1,
-            desc: "Sewa Mobil Dengan Supir di Bali 12 Jam"
-        },
-        {
-            id: 2,
-            desc: "Sewa Mobil Lepas Kunci di Bali 24 Jam"
-        },
-        {
-            id: 3,
-            desc: "Sewa Mobil Jangka Panjang Bulanan"
-        },
-        {
-            id: 4,
-            desc: "Gratis Antar - Jemput Mobil di Bandara"
-        },
-        {
-            id: 5,
-            desc: "Layanan Airport Transfer / Drop In Out"
-        }
-    ]
+    
 
     return (
         <div className={`second-section-wrapper ${isOpen ? 'blur' : ''}`}>

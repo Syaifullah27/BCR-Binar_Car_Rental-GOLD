@@ -25,7 +25,7 @@ const App = () => {
     // <div className="App" onClick={closeMenu}>
     <div>
       <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen}/>
-      <MainSection isOpen={isMenuOpen}/>
+      <MainSection isOpen={isMenuOpen} btn={true}/>
       <SecondSection isOpen={isMenuOpen}/>
       <WhyUsSection isOpen={isMenuOpen}/>
       <TestimoniSection isOpen={isMenuOpen}/>
