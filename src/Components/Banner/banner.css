@@ -47,3 +47,14 @@
     }
     
 }
+
+@media screen and (max-width: 576px) {
+    .banner-text h1 {
+        font-size: 25px;
+    }
+
+    .banner-text p {
+        width: 300px;
+    }
+    
+}
