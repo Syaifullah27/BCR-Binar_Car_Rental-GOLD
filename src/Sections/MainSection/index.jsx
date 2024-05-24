@@ -1,4 +1,4 @@
-import Button from "../Component/Button/Button"
+import Button from "../../Components/Button/Button"
 import "./mainSection.css"
 // eslint-disable-next-line react/prop-types
 const MainSection = ({ isOpen, btn }) => {

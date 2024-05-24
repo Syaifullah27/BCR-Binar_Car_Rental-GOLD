@@ -1,5 +1,5 @@
 import "./banner.css"
-import Button from "../Component/Button/Button"
+import Button from "../../Components/Button/Button"
 // eslint-disable-next-line react/prop-types
 const Banner = ({ isOpen }) => {
     return (

@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import MainSection from './Components/MainSection'
-import Navbar from './Components/Navbar'
-import SecondSection from './Components/SecondSection'
-import WhyUsSection from './Components/whyUsSection'
-import TestimoniSection from './Components/testimoniSection'
-import Banner from './Components/Banner'
+import MainSection from './Sections/MainSection'
+import Navbar from '../src/Components/Navbar'
+import SecondSection from './Sections/SecondSection'
+import WhyUsSection from './Sections/whyUsSection'
+import TestimoniSection from './Sections/testimoniSection'
+import Banner from './Sections/Banner'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
