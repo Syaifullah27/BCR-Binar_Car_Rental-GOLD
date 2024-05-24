@@ -6,6 +6,10 @@
     z-index: 9999;
 }
 
+.logo {
+    width: 215px;
+}
+
 .navbar {
     padding-top: 20px;
     padding-bottom: 5px;
@@ -14,6 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 10px;
 }
 
 .navbar h2 {
@@ -43,6 +48,7 @@
     padding: 10px;
     text-align: center;
     color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 1px rgba(5, 5, 5, 0.658);
     font-size: 1em;
 }
 

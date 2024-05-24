@@ -10,7 +10,7 @@ const Navbar = ({isOpen, toggleMenu,}) => {
     return (
         <div className="navbar-wrapper">
             <nav className="navbar">
-                <h2 className={`${isOpen ? 'blur' : ''}`}>SYH OFFICIAL</h2>
+                <img src='./images/EsyehaCarRentals.png' className={`${isOpen ? 'blur' : ''}logo`} />
                 <div className="menu-toggle" onClick={toggleMenu}>
                     <input type="checkbox" />
                     <span></span>
