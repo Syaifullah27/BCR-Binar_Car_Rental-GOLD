@@ -95,3 +95,10 @@ export const dataServices = [
 ]
 
 
+export const socialMediaImg = [
+    "./images/icon_facebook.png",
+    "./images/icon_instagram.png",
+    "./images/icon_twitter.png",
+    "./images/icon_mail.png",
+    "./images/icon_twitch.png"
+]

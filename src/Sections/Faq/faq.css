@@ -16,10 +16,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex: 1;
+    flex: 2;
 }
 
 .faq-title p{
+    width: 350px;
     font-size: 16px;
     font-weight: 600;
     padding-bottom: 20px;
