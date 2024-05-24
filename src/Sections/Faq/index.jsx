@@ -40,6 +40,7 @@ const FaqSections = ({ isOpen }) => {
         bgColor: 'white',
         titleTextColor: "black",
         rowTitleColor: "black",
+        rowTitlePaddingBottom: "20px",
         rowTitleTextSize: "17px",
         rowContentPaddingBottom: '10px',
         // rowContentColor: 'grey',
@@ -48,7 +49,7 @@ const FaqSections = ({ isOpen }) => {
     
     const config = {
         animate: true,
-        arrowIcon: "V",
+        arrowIcon: <img src="./public/images/down.png" alt="bawah" />,
         tabFocus: true
     };
     
