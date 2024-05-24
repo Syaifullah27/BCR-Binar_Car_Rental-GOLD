@@ -117,6 +117,14 @@
 
 
 @media (max-width:765px) {
+.logo {
+    width: 200px;
+}
+
+.logo img {
+    width: 100%;
+}
+
     .navbar {
         width: 100%;
         padding: 10px;
