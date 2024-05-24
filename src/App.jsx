@@ -6,6 +6,7 @@ import SecondSection from './Sections/SecondSection'
 import WhyUsSection from './Sections/whyUsSection'
 import TestimoniSection from './Sections/testimoniSection'
 import Banner from './Sections/Banner'
+import FaqSections from './Sections/Faq'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -31,6 +32,7 @@ const App = () => {
       <WhyUsSection isOpen={isMenuOpen}/>
       <TestimoniSection isOpen={isMenuOpen}/>
       <Banner isOpen={isMenuOpen}/>
+      <FaqSections isOpen={isMenuOpen}/>
     </div>
   )
 }
