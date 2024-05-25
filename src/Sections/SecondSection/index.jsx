@@ -5,7 +5,7 @@ const SecondSection = ({ isOpen }) => {
     
 
     return (
-        <div className={`second-section-wrapper ${isOpen ? 'blur' : ''}`}>
+        <div className={`second-section-wrapper ${isOpen ? 'blur' : ''}`} id="services">
             <div className="second-section-container">
                 <div className="left-second-section">
                     <img src="./images/img_service.png" alt="" />

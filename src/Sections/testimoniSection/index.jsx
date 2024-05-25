@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // import { useState } from "react";
 import "./testimoni.css"
 import { dataTestimoni } from "../../Utils/DumyData";
@@ -74,7 +75,7 @@ const TestimoniSection = ({ isOpen }) => {
 
 
     return (
-        <div className={`${isOpen ? 'blur' : ''}`}>
+        <div className={`${isOpen ? 'blur' : ''}`} id="testimony">
             <div className="testimoni-container">
                 <h1>Testimonial</h1>
                 <p>Berbagai review positif dari para pelanggan kami</p>

@@ -4,7 +4,7 @@ import { dataWhyUs } from "../../Utils/DumyData"
 const WhyUsSection = ({ isOpen }) => {
     
     return (
-        <div className={`${isOpen ? 'blur' : ''}`}>
+        <div className={`${isOpen ? 'blur' : ''}`} id="whyUs">
             <div className="why-us-wrapper">
                 <div className="why-us-container">
                     <h1>Why Us?</h1>

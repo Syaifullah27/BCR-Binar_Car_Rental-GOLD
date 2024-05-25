@@ -4,7 +4,7 @@ import "./mainSection.css"
 const MainSection = ({ isOpen, btn }) => {
 
     return (
-        <div className={`main-section-wrapper ${isOpen ? 'blur' : ''}`}>
+        <div className={`main-section-wrapper ${isOpen ? 'blur' : ''}`} id="home">
             <div className="main-section-container">
                 <div className="left-main-section">
                     <h1 className="title">Sewa & Rental Mobil Terbaik Di Kawasan (Lokasimu)</h1>

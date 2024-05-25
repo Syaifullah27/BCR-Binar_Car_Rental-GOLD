@@ -57,7 +57,7 @@ const FaqSections = ({ isOpen }) => {
 
 
     return (
-        <div className={"faq-wrapper" + (isOpen ? " blur" : "")}>
+        <div className={"faq-wrapper" + (isOpen ? " blur" : "")} id="faq">
             <div className="faq-container">
                 <div className="faq-title">
                     <h1>Frequently Asked Questions</h1>
