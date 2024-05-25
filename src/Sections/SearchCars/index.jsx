@@ -29,6 +29,7 @@ const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
         <div className={"search-cars-wrapper" + (isOpen ? " blur" : "")}>
             <div className="search-cars-container">
                 <div className="search-cars">
+
                     <div className="search-input">
                         <label htmlFor="">Nama Mobil</label>
                         <input 
@@ -37,6 +38,7 @@ const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
                         type="text" 
                         placeholder="Ketik nama/tipe mobil" />
                     </div>
+
                     <div className="search-input">
                         <label htmlFor="">kategori</label>
                         <select 
@@ -52,6 +54,7 @@ const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
                             <option value="option3">6 - 8 orang</option>
                         </select>
                     </div>
+
                     <div className="search-input">
                         <label htmlFor="">Harga</label>
                         <select 
@@ -67,6 +70,7 @@ const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
                             <option value="harga3">&#60; Rp. 400.000</option>
                         </select>
                     </div>
+
                     <div className="search-input">
                         <label htmlFor="">Status</label>
                         <select
@@ -81,7 +85,8 @@ const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
                             <option value="value2">Tidack</option>
                         </select>
                     </div>
-                    <button className="btn">Cari Mobil</button>
+
+                    <button type="submit" className="btn">Cari Mobil</button>
                 </div>
             </div>
         </div>
