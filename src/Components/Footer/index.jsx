@@ -1,7 +1,8 @@
 import "./footer.css"
 import { socialMediaImg } from "../../Utils/DumyData"
+import { Link } from "react-router-dom"
 // eslint-disable-next-line react/prop-types
-const Footer = ({ isOpen, isFocused }) => {
+const Footer = ({ isOpen, isFocused, inMenu }) => {
 
 
 
@@ -15,10 +16,27 @@ const Footer = ({ isOpen, isFocused }) => {
                 </div>
                 <div className="footer-menu">
                     <ul>
-                        <li><a href="#services">Our Servis</a></li>
-                        <li><a href="#whyUs">Why Us</a></li>
-                        <li><a href="#testimony">Testimonial</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        {
+                            inMenu === true ? 
+                            <div className="link">
+                                <Link to="/" 
+                                style={{ textDecoration: "none",fontSize: "16px", fontWeight: "500", color: "black", textShadow: "0px 0px 1px rgb(19, 16, 16)", transition: ".2s all ease" }}><li>Home</li></Link>
+                                <Link style={{ textDecoration: "none",fontSize: "16px", fontWeight: "500", color: "black", textShadow: "0px 0px 1px rgb(19, 16, 16)", transition: ".2s all ease" }}
+                                to="/"><li>Our Servis</li></Link>
+                                <Link style={{ textDecoration: "none",fontSize: "16px", fontWeight: "500", color: "black", textShadow: "0px 0px 1px rgb(19, 16, 16)", transition: ".2s all ease" }}
+                                to="/"><li>Why Us</li></Link>
+                                <Link style={{ textDecoration: "none",fontSize: "16px", fontWeight: "500", color: "black", textShadow: "0px 0px 1px rgb(19, 16, 16)", transition: ".2s all ease" }}
+                                to="/"><li>Testimonial</li></Link>
+                                <Link style={{ textDecoration: "none",fontSize: "16px", fontWeight: "500", color: "black", textShadow: "0px 0px 1px rgb(19, 16, 16)", transition: ".2s all ease" }}
+                                to="/"><li>FAQ</li></Link>
+                            </div> : 
+                            <>
+                                <li><a href="#services">Our Servis</a></li>
+                                <li><a href="#whyUs">Why Us</a></li>
+                                <li><a href="#testimony">Testimonial</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                            </>
+                        }
                     </ul>
                 </div>
                 <div className="footer-socialMedia">

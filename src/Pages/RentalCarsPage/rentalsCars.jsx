@@ -4,7 +4,8 @@ import Navbar from "../../Components/Navbar"
 import MainSection from "../../Sections/MainSection"
 import SearchCars from "../../Sections/SearchCars"
 
-const RentalsPage = () => {
+// eslint-disable-next-line react/prop-types
+const RentalsPage = ({ inMenu }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const toggleMenu = () => {
@@ -29,7 +30,7 @@ const RentalsPage = () => {
             <SearchCars isOpen={isMenuOpen}
             handleInputFocus={handleInputFocus} 
             handleInputBlur={handleInputBlur}/>
-            <Footer isFocused={isFocused} isOpen={isMenuOpen}/>
+            <Footer isFocused={isFocused} isOpen={isMenuOpen} inMenu={inMenu}/>
         </div>
     )
 }
