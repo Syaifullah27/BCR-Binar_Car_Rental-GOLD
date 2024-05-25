@@ -15,10 +15,10 @@ const Footer = ({ isOpen }) => {
                 </div>
                 <div className="footer-menu">
                     <ul>
-                        <li><a href="">Our Servis</a></li>
-                        <li><a href="">Why Us</a></li>
-                        <li><a href="">Testimonial</a></li>
-                        <li><a href="">FAQ</a></li>
+                        <li><a href="#services">Our Servis</a></li>
+                        <li><a href="#whyUs">Why Us</a></li>
+                        <li><a href="#testimony">Testimonial</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div className="footer-socialMedia">
@@ -35,7 +35,7 @@ const Footer = ({ isOpen }) => {
                 </div>
                 <div className="footer-copyright">
                     <p>Copyright Binar 2024</p>
-                    <img src="./images/EsyehaCarRentals.png" alt="" />
+                    <img src="./images/EsyehaCarRentals.png" alt=""/>
                 </div>
             </div>
         </div>

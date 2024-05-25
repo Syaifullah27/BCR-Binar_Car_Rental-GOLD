@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom"
 import "./button.css"
 const Button = () => {
     return (
-        <button className="btn">Mulai Sewa Mobil</button>
+        <Link className="btn" to={"/rentals-cars"}>Mulai Sewa Mobil</Link>
     )
 }
 

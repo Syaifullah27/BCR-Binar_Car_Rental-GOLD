@@ -9,7 +9,8 @@ import Banner from '../../Sections/Banner'
 import FaqSections from '../../Sections/Faq'
 import Footer from '../../Components/Footer'
 
-const HomePage = () => {
+// eslint-disable-next-line react/prop-types
+const HomePage = ({ inMenu }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const toggleMenu = () => {
@@ -27,7 +28,7 @@ const HomePage = () => {
     return (
         // <div className="App" onClick={closeMenu}>
         <div>
-            <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} />
+            <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} inMenu={inMenu}/>
             <MainSection isOpen={isMenuOpen} btn={true} />
             <SecondSection isOpen={isMenuOpen} />
             <WhyUsSection isOpen={isMenuOpen} />
