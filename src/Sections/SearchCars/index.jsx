@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./searchCars.css"
 
 // eslint-disable-next-line react/prop-types
-const SearchCars = ({  handleInputFocus, handleInputBlur }) => {
+const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
 
     // opsi kapsasitas mobil
     const [selectedOption, setSelectedOption] = useState('');
@@ -26,7 +26,7 @@ const SearchCars = ({  handleInputFocus, handleInputBlur }) => {
 
 
     return (
-        <div className="search-cars-wrapper">
+        <div className={"search-cars-wrapper" + (isOpen ? " blur" : "")}>
             <div className="search-cars-container">
                 <div className="search-cars">
                     <div className="search-input">
