@@ -27,7 +27,7 @@ const Navbar = ({isOpen, toggleMenu, inMenu}) => {
                         </> : 
                         <>
                             <Link to="/#home"><li>Home</li></Link>
-                            <Link to="/#home"><li>Home</li></Link>
+                            <Link to="/#home"><li>Our Services</li></Link>
                             <Link to="/"><li>Why Us</li></Link>
                             <Link to="/"><li>Testimony</li></Link>
                             <Link to="/"><li>FAQ</li></Link>
