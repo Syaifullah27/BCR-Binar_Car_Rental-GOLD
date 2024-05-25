@@ -1,0 +1,101 @@
+.search-cars-wrapper {
+    position: relative;
+    bottom: 50px;
+    padding-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3C3C3C;
+}
+
+.search-cars-container {
+    max-width: 1150px;
+    margin:  0 auto;
+    display: flex;
+    gap: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+    height: 120px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-cars {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.search-input input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #D0D0D0;
+    outline: none;
+}
+.search-input input:not(:placeholder-shown) {
+    border: 1px solid #222222;
+}
+
+.search-input input:focus {
+    border: 1px solid #35B0A7;
+}
+
+.btn {
+    margin-top: 25px;
+    width: 140px;
+    height: 36px;
+    background-color: #5CB85F;
+    border: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px, 12px, 8px, 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500; 
+}
+
+.btn:hover {
+    background-color: #2E8B57;
+}
+
+
+
+.hide-arrow {
+    border: 1px solid #222222;
+    outline: none;
+    color: black;
+    appearance: none; /* Menghilangkan default arrow */
+    -webkit-appearance: none; /* Untuk browser Webkit (Safari, Chrome, dll.) */
+    -moz-appearance: none; /* Untuk browser Mozilla Firefox */
+    background-image: none; /* Menghilangkan background image (biasanya panah dropdown) */
+    /* Anda dapat menyesuaikan styling lebih lanjut sesuai kebutuhan */
+}
+
+select {
+    border: 1px solid #D0D0D0;
+    width: 200px;
+    padding: 10px;
+    color: #3c3c3cc7;
+    border-radius: 5px;
+}
+
+select:focus {
+    border: 1px solid #5CB85F;
+}
+
+.focused {
+    filter: blur(10px);
+}
+

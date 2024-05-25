@@ -1,10 +1,10 @@
 import Button from "../../Components/Button/Button"
 import "./mainSection.css"
 // eslint-disable-next-line react/prop-types
-const MainSection = ({ isOpen, btn }) => {
+const MainSection = ({ isOpen, btn, isFocused }) => {
 
     return (
-        <div className={`main-section-wrapper ${isOpen ? 'blur' : ''}`} id="home">
+        <div className={`main-section-wrapper ${isOpen ? 'blur' : ''} ${isFocused ? 'focused' : ''}`} id="home">
             <div className="main-section-container">
                 <div className="left-main-section">
                     <h1 className="title">Sewa & Rental Mobil Terbaik Di Kawasan (Lokasimu)</h1>

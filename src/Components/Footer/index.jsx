@@ -1,12 +1,12 @@
 import "./footer.css"
 import { socialMediaImg } from "../../Utils/DumyData"
 // eslint-disable-next-line react/prop-types
-const Footer = ({ isOpen }) => {
+const Footer = ({ isOpen, isFocused }) => {
 
 
 
     return (
-        <div className={"footer-wrapper" + (isOpen ? " blur" : "")}>
+        <div className={"footer-wrapper" + (isOpen ? " blur" : "") + (isFocused ? " focused" : "")}>
             <div className="footer-container">
                 <div className="footer-contact">
                     <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
