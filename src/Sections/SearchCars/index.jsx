@@ -81,8 +81,8 @@ const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
                             onFocus={handleInputFocus}
                             className={selectedOption3 ? 'hide-arrow' : ''}>
                             <option value="" disabled hidden>Disewa</option>
-                            <option value="value1">Ya</option>
-                            <option value="value2">Tidack</option>
+                            <option value="value1">Disewa</option>
+                            <option value="value2">Disewakan</option>
                         </select>
                     </div>
 
