@@ -3,6 +3,11 @@ import "./searchCars.css"
 
 // eslint-disable-next-line react/prop-types
 const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
+    // untuk input value
+    const [inputValue, setInputValue] = useState('');
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
+    }
 
     // opsi kapsasitas mobil
     const [selectedOption, setSelectedOption] = useState('');
@@ -23,6 +28,12 @@ const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
     };
 
 
+    // ketika tombol diklik value dari input terkirirm dan halaman pinda ke resultPage
+    const handleButtonClick = (event) => {
+        event.preventDefault();
+        window.location.href = '/result-cars';
+        console.log(inputValue, selectedOption, selectedOption2, selectedOption3)
+    }
 
 
     return (
@@ -33,6 +44,8 @@ const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
                     <div className="search-input">
                         <label htmlFor="">Nama Mobil</label>
                         <input 
+                        value={inputValue}
+                        onChange={handleInputChange}
                         onBlur={handleInputBlur}
                         onFocus={handleInputFocus}
                         type="text" 
@@ -86,7 +99,7 @@ const SearchCars = ({  handleInputFocus, handleInputBlur, isOpen }) => {
                         </select>
                     </div>
 
-                    <button type="submit" className="btn">Cari Mobil</button>
+                    <button type="submit" className="btn" onClick={handleButtonClick}>Cari Mobil</button>
                 </div>
             </div>
         </div>
