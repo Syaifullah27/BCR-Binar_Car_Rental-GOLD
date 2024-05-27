@@ -97,8 +97,7 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
                             validationErrors.inputValue ? (
                                 <input
                                     type="text"
-                                    style={{border: '1px solid red'}}
-                                    className="input-eror"
+                                    className={inputValue ? 'eror' : ''}
                                     value={inputValue}
                                     onChange={handleInputChange}
                                     onBlur={handleInputBlur}
