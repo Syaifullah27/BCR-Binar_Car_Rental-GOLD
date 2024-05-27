@@ -66,8 +66,13 @@
     font-weight: 500; 
 }
 
-.btn:hover {
-    background-color: #2E8B57;
+
+.eror {
+    border: 1px solid red;
+}
+
+.input-eror {
+    border: 1px solid red;
 }
 
 
@@ -81,6 +86,10 @@
     -moz-appearance: none; /* Untuk browser Mozilla Firefox */
     background-image: none; /* Menghilangkan background image (biasanya panah dropdown) */
     /* Anda dapat menyesuaikan styling lebih lanjut sesuai kebutuhan */
+}
+
+.eror {
+    border: 1px solid red;
 }
 
 select {
