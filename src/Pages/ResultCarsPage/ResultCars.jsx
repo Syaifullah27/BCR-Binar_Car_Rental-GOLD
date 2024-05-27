@@ -10,7 +10,7 @@ const ResultCars = () => {
 
     return (
         <div>
-            <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen}/>
+            <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} logoBtn={false}/>
         </div>
     )
 }

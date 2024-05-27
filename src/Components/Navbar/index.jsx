@@ -2,14 +2,16 @@ import { Link } from 'react-router-dom'
 import './navbar.css'
 
 // eslint-disable-next-line react/prop-types
-const Navbar = ({isOpen, toggleMenu, inMenu}) => {    
+const Navbar = ({isOpen, toggleMenu, inMenu, logoBtn}) => {    
 
     return (
         <div className="navbar-wrapper">
             <nav className="navbar">
                 <img src='./images/EsyehaCarRentals.png' className={`${isOpen ? 'blur' : ''} logo`}/>
                 <div className='backToMenu'>
-                    <a href="#home">back</a>
+                    {
+                        logoBtn === true ? <a href="#home">back</a> : <Link to="/">back</Link>
+                    }
                 </div>
                 <div className="menu-toggle" onClick={toggleMenu}>
                     <input type="checkbox" />
@@ -27,7 +29,7 @@ const Navbar = ({isOpen, toggleMenu, inMenu}) => {
                         </> : 
                         <>
                             <Link to="/#home"><li>Home</li></Link>
-                            <Link to="/#home"><li>Our Services</li></Link>
+                            <Link to="/"><li>Our Services</li></Link>
                             <Link to="/"><li>Why Us</li></Link>
                             <Link to="/"><li>Testimony</li></Link>
                             <Link to="/"><li>FAQ</li></Link>
