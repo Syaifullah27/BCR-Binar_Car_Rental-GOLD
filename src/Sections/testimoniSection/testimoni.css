@@ -2,7 +2,14 @@
     margin: 0 10px;
 }
 
-
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    border: 1px solid red;
+}
 
 .testimoni-container {
     text-align: center;

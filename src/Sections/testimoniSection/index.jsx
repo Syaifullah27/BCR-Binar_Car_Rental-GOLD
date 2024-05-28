@@ -12,35 +12,36 @@ function SampleNextArrow(props) {
     // eslint-disable-next-line react/prop-types
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style,marginRight:"20px", background: "#5CB85F", borderRadius: "50%",width: "25px", height: "25px", display: "flex", justifyContent: "center", alignItems: "center",  }}
-        onClick={onClick}
-      />
+        <div
+            className={className}
+            style={{ ...style, marginRight: "20px", background: "#5CB85F", borderRadius: "50%", width: "25px", height: "25px", display: "flex", justifyContent: "center", alignItems: "center", }}
+            onClick={onClick}
+        />
     );
-  }
-  
-  function SamplePrevArrow(props) {
+}
+
+function SamplePrevArrow(props) {
     // eslint-disable-next-line react/prop-types
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, marginLeft:"20px",zIndex: 1, backgroundColor: "#5CB85F",borderRadius: "50%",width: "25px", height: "25px", display: "flex", justifyContent: "center", alignItems: "center",  }}
-        onClick={onClick}
-      />
+        <div 
+            className={className}
+            style={{ ...style, marginLeft: "20px", zIndex: 1, backgroundColor: "#5CB85F", borderRadius: "50%", width: "25px", height: "25px", display: "flex", justifyContent: "center", alignItems: "center", }}
+            onClick={onClick}
+        />
     );
-  }
-
+}
 
 
 
 // eslint-disable-next-line react/prop-types
 const TestimoniSection = ({ isOpen }) => {
+
+
     const settings = {
         infinite: true,
         speed: 600,
-        dots: true,
+        // dots: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
@@ -81,20 +82,20 @@ const TestimoniSection = ({ isOpen }) => {
                 <p>Berbagai review positif dari para pelanggan kami</p>
                 <div className="testimoni-card-container">
                     <Slider {...settings}>
-                    {
-                        dataTestimoni.map((data) => {
-                            return (
-                                <div className="testimoni-card" key={data.id}>
-                                    <img src={data.img} alt="testimoni-img" />
+                        {
+                            dataTestimoni.map((data) => {
+                                return (
+                                    <div className="testimoni-card" key={data.id}>
+                                        <img src={data.img} alt="testimoni-img" />
                                         <div className="card-list">
                                             <img src={data.rate} alt="" />
                                             <p>"{data.desc}"</p>
                                             <h4>{data.title}</h4>
                                         </div>
-                                </div>
-                            )
-                        })
-                    }
+                                    </div>
+                                )
+                            })
+                        }
                     </Slider>
                 </div>
             </div>
