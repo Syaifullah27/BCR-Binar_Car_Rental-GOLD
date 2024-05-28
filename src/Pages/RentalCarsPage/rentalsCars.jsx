@@ -26,7 +26,7 @@ const RentalsPage = ({ inMenu }) => {
     return (
         <div>
             <Navbar isFocused={isFocused} isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} logoBtn={false}/>
-            <MainSection isOpen={isMenuOpen} isFocused={isFocused} />
+            <MainSection isOpen={isMenuOpen} isFocused={isFocused} ptMainSection={false}/>
             <SearchCars isOpen={isMenuOpen}
             handleInputFocus={handleInputFocus} 
             handleInputBlur={handleInputBlur}/>

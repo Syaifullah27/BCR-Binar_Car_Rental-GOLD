@@ -1,9 +1,11 @@
 .search-cars-wrapper {
     position: relative;
     bottom: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 7px;
     font-family: Arial, Helvetica, sans-serif;
     color: #3C3C3C;
+    position: relative;
+    z-index: 9999;
 }
 
 .search-cars-container {
@@ -12,7 +14,7 @@
     display: flex;
     gap: 50px;
     background-color: #FFFFFF;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.13);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.185);
     border-radius: 10px;
     height: 120px;
     padding: 20px;
@@ -100,20 +102,45 @@ select:focus {
     border: 1px solid #5CB85F;
 }
 
-.focused {
-    filter: blur(10px);
+.focused::before{
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    height: 160%;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-color:rgba(0, 0, 0, 0.61);
+    
+    
 }
 
 @media screen and (max-width: 768px) {
+.focused::before{
+    height: 300%;
+}
 
     .search-cars-wrapper  {
-        bottom: 0;
-        top: 100px;
+        /* top: 100px; */
+        padding-left: 20px;
+        padding-bottom: 0;
         /* border: 1px solid rgb(4, 0, 255); */
-        padding-bottom: 300px;
+        
+    }
+
+    .search-cars-container {
+        padding: 0;
+        flex-direction: column;
+        height: 100%;
+        /* border: 1px solid red; */
     }
     
     .search-cars {
+        position: relative;
+        z-index: 1;
+        /* border: 1px solid black; */
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.13);
         padding-top: 20px;
         padding-bottom: 20px;
