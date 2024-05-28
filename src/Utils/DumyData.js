@@ -50,7 +50,7 @@ export const dataTestimoni = [
     },
     {
         id: 4,
-        img: "./images/simanjutak.jpg",
+        img: "./images/rusdicik.jpg",
         title: "Dicky Simorangkir 40, Medan",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
         rate: "./images/Rate.png",

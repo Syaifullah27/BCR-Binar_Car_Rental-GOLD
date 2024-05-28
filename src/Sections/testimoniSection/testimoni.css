@@ -2,14 +2,34 @@
     margin: 0 10px;
 }
 
-.arrow {
+.arrow-btn {
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    gap: 10px;
-    border: 1px solid red;
+    gap: 20px;
 }
+
+.btn-prev, .btn-next {
+    background-color: rgb(255, 255, 255);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #C4C4C4;
+    transition: .2s all ease;
+    color: black;
+}
+
+.btn-next:hover {
+    color: whitesmoke;
+    background-color: #5CB85F;
+}
+.btn-prev:hover {
+    color: whitesmoke;
+    background-color: #5CB85F;
+}
+
 
 .testimoni-container {
     text-align: center;
@@ -31,18 +51,16 @@
 
 .testimoni-card {
     display: flex;
-    width: 500px;
     box-shadow: 0px 0px 2px #C4C4C4;
     background-color:#F1F3FF; ;
     border-radius: 10px;
     padding: 20px;
-    gap: 10px;
+    gap: 35px;
     justify-content: center;
     align-items: center;
 }
 
 .testimoni-card img {
-    margin-left: 40%;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -51,7 +69,6 @@
 .card-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     align-items: start;
 }
 
@@ -67,10 +84,9 @@
 
 
 .card-list img {
-    margin-left: 34%;
-    margin-top: 20px;
-    width: 100px;
-    height: 23px;
+    margin-top: 10px;
+    width: 90px;
+    height: 19px;
     border-radius: 0px;
 }
 
@@ -84,35 +100,6 @@
 
 
 
-
-
-
-
-
-
-@media screen and (max-width: 766px) {
-    .testimoni-card{
-        transition: .2 all ease;
-    }
-
-    .testimoni-card img {
-        margin-left: 43%;
-    }
-
-    .card-list img {
-        margin-left: 40%;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .testimoni-card img {
-        margin-left: 40%;
-    }
-
-    .card-list img {
-        margin-left: 35%;
-    }
-} 
 
 
 /* .testimoni-wrapper {
