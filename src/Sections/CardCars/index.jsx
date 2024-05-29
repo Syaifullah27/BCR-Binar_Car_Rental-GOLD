@@ -1,8 +1,9 @@
 import "./cardcars.css"
 
-const CardCars = () => {
+// eslint-disable-next-line react/prop-types
+const CardCars = ({ isOpen }) => {
     return (
-        <div className="card-cars-wrapper">
+        <div className={"card-cars-wrapper" + (isOpen ? " blur" : "")}>
             <div className="card-cars-container">
                 <div className="card-cars">
                     <img src="./images/cars.png" alt="cars" />
