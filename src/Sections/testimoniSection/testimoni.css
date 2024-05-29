@@ -2,6 +2,22 @@
     margin: 0 10px;
 }
 
+.slick-arrow.slick-prev {
+    display: none;
+    /* border: 1px solid red; */
+    position: relative;
+    left: 10px;
+    cursor: default;
+}
+
+.slick-arrow.slick-next{
+    display: none;
+    /* border: 1px solid red; */
+    position: relative;
+    right: 20px;
+    cursor:default;
+}
+
 .arrow-btn {
     padding-top: 20px;
     display: flex;
@@ -32,6 +48,7 @@
 
 
 .testimoni-container {
+    /* border: 1px solid red; */
     text-align: center;
     display: flex;
     flex-direction: column;

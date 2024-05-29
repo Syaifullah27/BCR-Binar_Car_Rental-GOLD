@@ -53,13 +53,10 @@ const TestimoniSection = ({ isOpen }) => {
         infinite: true,
         speed: 600,
         arrow: false,
-        // dots: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
         variableWidth: false,
-        // prevArrow: <SamplePrevArrow />,
-        // nextArrow: <SampleNextArrow />,
         responsive: [
             {
                 breakpoint: 1024,
