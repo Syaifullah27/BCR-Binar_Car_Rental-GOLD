@@ -25,12 +25,24 @@ const RentalsPage = ({ inMenu }) => {
 
     return (
         <div>
-            <Navbar isFocused={isFocused} isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} logoBtn={false}/>
-            <MainSection isOpen={isMenuOpen} isFocused={isFocused} ptMainSection={false}/>
-            <SearchCars isOpen={isMenuOpen}
+            <Navbar 
+            isFocused={isFocused} 
+            isOpen={isMenuOpen} 
+            toggleMenu={toggleMenu} 
+            setIsMenuOpen={setIsMenuOpen} 
+            logoBtn={false}/>
+            <MainSection 
+            isOpen={isMenuOpen} 
+            isFocused={isFocused} 
+            ptMainSection={false}/>
+            <SearchCars 
+            isOpen={isMenuOpen}
             handleInputFocus={handleInputFocus} 
             handleInputBlur={handleInputBlur}/>
-            <Footer isFocused={isFocused} isOpen={isMenuOpen} inMenu={inMenu}/>
+            <Footer 
+            isFocused={isFocused} 
+            isOpen={isMenuOpen} 
+            inMenu={inMenu}/>
         </div>
     )
 }

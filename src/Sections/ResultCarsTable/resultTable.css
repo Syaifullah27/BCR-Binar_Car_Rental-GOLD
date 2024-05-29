@@ -1,0 +1,10 @@
+.result-cars-table-wrapper {
+    border: 1px solid red;
+    padding-top: 100px;
+}
+
+.result-cars-table-container {
+    border: 1px solid red;
+    max-width: 1000px;
+    margin: 0 auto;
+}

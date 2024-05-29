@@ -28,7 +28,8 @@ const HomePage = ({ inMenu }) => {
     return (
         // <div className="App" onClick={closeMenu}>
         <div>
-            <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} inMenu={inMenu} logoBtn={true}/>
+            <Navbar boxShadow={true}
+            isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} inMenu={inMenu} logoBtn={true}/>
             <MainSection isOpen={isMenuOpen} btn={true} ptMainSection={true}/>
             <SecondSection isOpen={isMenuOpen} />
             <WhyUsSection isOpen={isMenuOpen} />

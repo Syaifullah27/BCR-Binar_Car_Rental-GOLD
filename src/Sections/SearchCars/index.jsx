@@ -93,26 +93,14 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
 
                     <div className="search-input">
                         <label htmlFor="">Nama Mobil</label>
-                        {
-                            validationErrors.inputValue ? (
                                 <input
                                     type="text"
-                                    className={inputValue ? 'eror' : ''}
+                                    className={validationErrors.inputValue ? 'eror' : ''}
                                     value={inputValue}
                                     onChange={handleInputChange}
                                     onBlur={handleInputBlur}
                                     onFocus={handleInputFocus}
                                     placeholder="Masukan Nama Mobil" />
-                            ) : (
-                                <input
-                                    type="text"
-                                    value={inputValue}
-                                    onChange={handleInputChange}
-                                    onBlur={handleInputBlur}
-                                    onFocus={handleInputFocus}
-                                    placeholder="Masukan Nama Mobil" />
-                            )
-                        }
                     </div>
 
                     <div className="search-input">
