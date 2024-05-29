@@ -122,7 +122,7 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
                     <div className="search-input">
                         <label htmlFor="">Harga</label>
                         <select
-                            defaultValue={'Masukan Kapasitas Mobil'}
+                            defaultValue={'Masukan Harga Sewa per Hari'}
                             value={selectedOption2}
                             onChange={handleDropdownChange2}
                             onBlur={handleInputBlur}

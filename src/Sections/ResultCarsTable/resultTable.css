@@ -1,10 +1,76 @@
 .result-cars-table-wrapper {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding-top: 100px;
+    background-color:#F1F3FF;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .result-cars-table-container {
-    border: 1px solid red;
-    max-width: 1000px;
+    position: relative;
+    /* border: 1px solid red; */
+    max-width: 1050px;
+    height: 150px;
     margin: 0 auto;
+}
+
+.table-container {
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+    bottom: -70px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.table-input input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #D0D0D0;
+    outline: none;
+}
+
+.table-input input:not(:placeholder-shown) {
+    border: 1px solid #222222;
+}
+
+.table-input input:focus {
+    border: 1px solid #35B0A7;
+}
+
+
+.table-btn {
+    width: 140px;
+    height: 36px;
+    background-color: white;
+    border: 1px solid #0D28A6;
+    color: #0D28A6;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .1s all ease;
+}
+
+.table-btn:active {
+    background-color: #0D28A6;
+    color: white;
 }
