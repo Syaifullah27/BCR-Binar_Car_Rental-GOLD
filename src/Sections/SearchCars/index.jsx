@@ -4,12 +4,12 @@ import "./searchCars.css"
 // eslint-disable-next-line react/prop-types
 const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
 
-    const [validationErrors, setValidationErrors] = useState({
-        inputValue: false,
-        selectedOption: false,
-        selectedOption2: false,
-        selectedOption3: false,
-    });
+    // const [validationErrors, setValidationErrors] = useState({
+    //     inputValue: false,
+    //     selectedOption: false,
+    //     selectedOption2: false,
+    //     selectedOption3: false,
+    // });
 
 
 
@@ -41,24 +41,24 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
 
 
     // validasi jika input kosong
-    const validateForm = () => {
-        const errors = {
-            inputValue: inputValue === '',
-            selectedOption: selectedOption === '',
-            selectedOption2: selectedOption2 === '',
-            selectedOption3: selectedOption3 === '',
-        };
+    // const validateForm = () => {
+    //     const errors = {
+    //         inputValue: inputValue === '',
+    //         selectedOption: selectedOption === '',
+    //         selectedOption2: selectedOption2 === '',
+    //         selectedOption3: selectedOption3 === '',
+    //     };
 
-        setValidationErrors(errors);
-        const hasErrors = Object.values(errors).some(error => error);
-        if (hasErrors) {
-            // alert('Form Masih Kosong, Silahkan Lengkapi Form');
-            return false;
-            } else {
-            // alert('Form Valid');
-            return true;
-            }
-        };
+    //     setValidationErrors(errors);
+    //     const hasErrors = Object.values(errors).some(error => error);
+    //     if (hasErrors) {
+    //         // alert('Form Masih Kosong, Silahkan Lengkapi Form');
+    //         return false;
+    //         } else {
+    //         // alert('Form Valid');
+    //         return true;
+    //         }
+    //     };
         
 
     //     if (inputValue === '' || selectedOption === '' || selectedOption2 === '' || selectedOption3 === '') {
@@ -73,9 +73,10 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
 
     const handleButtonClick = (event) => {
         event.preventDefault();
-        if(validateForm()) {
-            window.location.href = '/result-cars';
-        }
+        window.location.href = '/result-cars';
+        // if(validateForm()) {
+        //     window.location.href = '/result-cars';
+        // }
         // const fields = [inputValue, selectedOption, selectedOption2, selectedOption3];
         // const filledFieldsCount = fields.filter(field => field !== '').length;
 
@@ -95,7 +96,7 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
                         <label htmlFor="">Nama Mobil</label>
                                 <input
                                     type="text"
-                                    className={validationErrors.inputValue ? 'eror' : ''}
+                                    // className={validationErrors.inputValue ? 'eror' : ''}
                                     value={inputValue}
                                     onChange={handleInputChange}
                                     onBlur={handleInputBlur}
@@ -111,7 +112,7 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
                             onChange={handleDropdownChange}
                             onBlur={handleInputBlur}
                             onFocus={handleInputFocus}
-                            className={selectedOption ? 'hide-arrow' : '' || validationErrors.selectedOption ? 'eror' : ''}>
+                            className={selectedOption ? 'hide-arrow' : ''}>
                             <option value="" disabled hidden>Masukan Kapasitas Mobil</option>
                             <option value="option1">2 - 4 orang</option>
                             <option value="option2">4 - 6 orang</option>
@@ -127,7 +128,7 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
                             onChange={handleDropdownChange2}
                             onBlur={handleInputBlur}
                             onFocus={handleInputFocus}
-                            className={selectedOption2 ? 'hide-arrow' : '' || validationErrors.selectedOption2 ? 'eror' : ''}>
+                            className={selectedOption2 ? 'hide-arrow' : ''}>
                             <option value="" disabled hidden>Masukan Harga Sewa per Hari</option>
                             <option value="harga1">&#60; Rp. 400.000</option>
                             <option value="harga2">Rp. 400.000 - Rp. 600.000</option>
@@ -143,7 +144,7 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
                             onChange={handleDropdownChange3}
                             onBlur={handleInputBlur}
                             onFocus={handleInputFocus}
-                            className={selectedOption3 ? 'hide-arrow' : '' || validationErrors.selectedOption3 ? 'eror' : ''}>
+                            className={selectedOption3 ? 'hide-arrow' : ''}>
                             <option value="" disabled hidden>Disewa</option>
                             <option value="value1">Disewa</option>
                             <option value="value2">Disewakan</option>
