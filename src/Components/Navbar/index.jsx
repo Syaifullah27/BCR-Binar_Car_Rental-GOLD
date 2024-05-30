@@ -12,7 +12,7 @@ const Navbar = ({isOpen, toggleMenu, inMenu, logoBtn, boxShadow}) => {
                 boxShadow: "0px 0px 16px rgba(0, 0, 0, 0.1)"}}
                 className="navbar-wrapper">
                     <nav className="navbar">
-                        <img src='./images/EsyehaCarRentals.png' className={`${isOpen ? 'blur' : ''} logo`}/>
+                        <img src={`./images/EsyehaCarRentals.png` } className={`${isOpen ? 'blur' : ''} logo`}/>
                         <div className='backToMenu'>
                             {
                                 logoBtn === true ? <a href="#home">back</a> : <Link to="/">back</Link>
