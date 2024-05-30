@@ -73,3 +73,14 @@
     font-size: 16px;
     font-weight: 600;
 }
+
+
+@media screen and (max-width: 768px) {
+    .detail-card {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        padding-top: 400px;
+    }
+    
+}
