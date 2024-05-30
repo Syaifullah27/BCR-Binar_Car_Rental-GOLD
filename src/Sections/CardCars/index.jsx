@@ -3,6 +3,7 @@ import axios from "axios";
 import "./cardcars.css"
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { formatRupiah } from "../../Utils/FormatDatas";
 
 // eslint-disable-next-line react/prop-types
 const CardCars = ({ isOpen }) => {
@@ -36,7 +37,7 @@ const CardCars = ({ isOpen }) => {
                             <div className="card-cars" key={data.id}>
                                 <img src={data.img ? data.img : "./images/cars.png"} alt="cars" />
                                 <p className="title-cars">{data.name ? data.name : "Toyota Kijang"}</p>
-                                <h4>Rp {data.price ? data.price : "100000"} / hari</h4>
+                                <h4>{formatRupiah(data.price)} / hari</h4>
                                 <p className="desc-cars">{data.desc ? data.desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aperiam et perspiciatis eveniet!"}</p>
                                 <Link to={`/detail-cars/${data.id}`}>
                                     <button className="card-cars-btn">Pilih Mobil</button>
