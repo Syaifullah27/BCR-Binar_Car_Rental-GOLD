@@ -79,6 +79,28 @@
 
 
 
+/* table search ada value */
+.tableValue {
+    justify-content: start;
+    gap: 15px;
+}
+
+.inputValue label{
+    color: #8A8A8A ;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.inputValue input {
+    border-radius: 0px;
+    padding: 12px;
+    width: 240px;
+}
+.inputValue select {
+    width: 240px;
+    border-radius: 0px;
+    padding: 12px;
+}
 
 
 

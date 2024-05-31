@@ -51,15 +51,23 @@
     padding: 20px;
 }
 
+.right-detail-card img {
+    width: 400px;
+    height: 293px;
+    border-radius: 10px;
+}
+
 .kategory {
     display: flex;
     gap: 7px;
     color: #8A8A8A;
     font-weight: 600;
     font-size: 14px;
+    /* color: #686868; */
 }
 
 .kategory img {
+    height: 15px;
     width: 15px;
 }
 

@@ -29,7 +29,7 @@ const DetailCard = ({isOpen, id}) => {
         <div className={`${isOpen ? 'blur' : ''}`}>
             <div className="detail-card-wrapper">
                 <div className="detail-card-container">
-                    <ResultCarsTable isOpen={isOpen}/>
+                    <ResultCarsTable isOpen={isOpen} btn={false} canModify={false}/>
                     <div className="detail-card">
                         <div className="left-detail">
                             <h2>Tentang Paket</h2>

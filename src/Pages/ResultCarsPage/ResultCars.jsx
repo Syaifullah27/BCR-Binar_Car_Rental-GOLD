@@ -15,7 +15,7 @@ const ResultCars = () => {
     return (
         <div>
             <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} logoBtn={false}/>
-            <ResultCarsTable isOpen={isMenuOpen}/>
+            <ResultCarsTable isOpen={isMenuOpen} btn={true} canModify={true}/>
             <CardCars isOpen={isMenuOpen}/>
             <div style={{marginTop: "120px"}}>
             <Footer isOpen={isMenuOpen}/>
