@@ -35,7 +35,7 @@ const CardCars = ({ isOpen }) => {
                     dataCars.map((data) => {
                         return (
                             <div className="card-cars" key={data.id}>
-                                <img src={data.img ? data.img : "./images/cars.png"} alt="cars" />
+                                <img src={data.image ? data.image : "./images/cars.png"} alt="cars" />
                                 <p className="title-cars">{data.name ? data.name : "Toyota Kijang"}</p>
                                 <h4>{formatRupiah(data.price)} / hari</h4>
                                 <p className="desc-cars">{data.desc ? data.desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aperiam et perspiciatis eveniet!"}</p>
