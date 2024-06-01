@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './navbar.css'
 
 // eslint-disable-next-line react/prop-types
-const Navbar = ({isOpen, toggleMenu, inMenu, logoBtn, boxShadow}) => {    
+const Navbar = ({isOpen, toggleMenu, inMenu, logoBtn, boxShadow,}) => {    
 
     return (
         <>

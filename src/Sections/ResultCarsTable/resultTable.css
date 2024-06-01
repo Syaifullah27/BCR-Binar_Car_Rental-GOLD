@@ -76,6 +76,16 @@
     color: white;
 }
 
+.hide-arrow {
+    border: 1px solid #222222;
+    outline: none;
+    color: black;
+    appearance: none; /* Menghilangkan default arrow */
+    -webkit-appearance: none; /* Untuk browser Webkit (Safari, Chrome, dll.) */
+    -moz-appearance: none; /* Untuk browser Mozilla Firefox */
+    background-image: none; /* Menghilangkan background image (biasanya panah dropdown) */
+    /* Anda dapat menyesuaikan styling lebih lanjut sesuai kebutuhan */
+}
 
 
 
@@ -103,17 +113,30 @@
 }
 
 
-
+.overlay::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
 
 
 @media screen and (max-width: 768px) {
 .result-cars-table-wrapper {
-    /* border: 1px solid red; */
     padding: 20px;
 }
 
 .result-cars-table-container {
-    bottom: -310px;
+    /* border: 1px solid red; */
+    bottom: -325px;
+}
+
+.detailCardCar {
+    /* border: 1px solid red; */
+    bottom: -220px;
 }
 
     .table-container {

@@ -2,7 +2,7 @@ import axios from "axios"
 import ResultCarsTable from "../../../Sections/ResultCarsTable"
 import { useState } from "react"
 import { useEffect } from "react"
-import { garansi, include } from "../../../Utils/DumyData"
+import { exclude, garansi, include, } from "../../../Utils/DumyData"
 import "./detailCard.css"
 import { formatKategoryCars, formatRupiah } from "../../../Utils/FormatDatas"
 // eslint-disable-next-line react/prop-types
@@ -29,7 +29,7 @@ const DetailCard = ({isOpen, id}) => {
         <div className={`${isOpen ? 'blur' : ''}`}>
             <div className="detail-card-wrapper">
                 <div className="detail-card-container">
-                    <ResultCarsTable isOpen={isOpen} btn={false} canModify={false}/>
+                    <ResultCarsTable isOpen={isOpen} btn={false} canModify={false} detailName={detailCars.name} detailCapacity={detailCars.category} detailPrice={formatRupiah(detailCars.price)} detailStatus={detailCars.status}/>
                     <div className="detail-card">
                         <div className="left-detail">
                             <h2>Tentang Paket</h2>
@@ -45,7 +45,7 @@ const DetailCard = ({isOpen, id}) => {
                             </div>
                             <div className="exclude-text">
                             <h3>Exclude</h3>
-                                {include.map((data) => {
+                                {exclude.map((data) => {
                                     return (
                                         <ul key={data}>
                                             <li>{data}</li>
@@ -66,8 +66,8 @@ const DetailCard = ({isOpen, id}) => {
                         </div>
                         <div className="right-detail">
                             <div className="right-detail-card">
-                                <img src={detailCars.image ? detailCars.image : "./../images/cars.png"} />
-                                <h3>{detailCars.name ? detailCars.name : "Toyota Kijang"}</h3>
+                                <img src={detailCars.image ? detailCars.image : "./../images/noImage.jpg"} />
+                                <h3>{detailCars.name ? detailCars.name : "Mobil"}</h3>
                                 <div className="kategory">
                                     <img src="./../images/jmlOrg.png" alt="" />
                                     <p>{formatKategoryCars(detailCars.category) ? formatKategoryCars(detailCars.category) : "-"}</p>

@@ -4,17 +4,21 @@ import "./cardcars.css"
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { formatRupiah } from "../../Utils/FormatDatas";
+import { noImg } from "../../Utils/DumyData";
 
 // eslint-disable-next-line react/prop-types
-const CardCars = ({ isOpen }) => {
+const CardCars = ({ isOpen, nameCar, capacityCar, priceCar, statusCar, isFocused }) => {
 
     const [dataCars, setDataCars] = useState([]);
+    const [page, setPage] = useState(1)
 
     const getDataCars = () => {
         axios
-            .get("https://api-car-rental.binaracademy.org/customer/v2/car")
+            .get(`https://api-car-rental.binaracademy.org/customer/v2/car?name=${nameCar}&category=${capacityCar}&isRented=${statusCar}&minPrice=${priceCar}&page=${page}&pageSize=9`)
             .then((res) => {
-                console.log(res.data);
+                // console.log(res.data);
+                // console.log(capacityCar);
+                // console.log(page);
                 setDataCars(res.data.cars);
             })
             .catch((err) => {
@@ -26,27 +30,59 @@ const CardCars = ({ isOpen }) => {
         getDataCars();
     }, [])
 
+    useEffect(() => {
+        getDataCars();
+    }, [page, nameCar, capacityCar,priceCar, statusCar])
+
+    
+    const scroolToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
+    const handleNextPage = () => {
+        setPage(page + 1);
+        scroolToTop();
+    }
+    const handlePrevPage = () => {
+        setPage(page - 1);
+        scroolToTop();
+    }
+
+
 
 
     return (
-        <div className={"card-cars-wrapper" + (isOpen ? " blur" : "")}>
+        <div className={`card-cars-wrapper ${isOpen ? " blur" : ""} ${isFocused ? "" : ""} `}>
+            {
+                dataCars.length === 0 && (
+                    <h1 style={{ textAlign: "center", marginTop: "20px"}}>Data Tidak Ditemukan</h1>
+                )
+            }
             <div className="card-cars-container">
                 {
                     dataCars.map((data) => {
                         return (
                             <div className="card-cars" key={data.id}>
-                                <img src={data.image ? data.image : "./images/cars.png"} alt="cars" />
-                                <p className="title-cars">{data.name ? data.name : "Toyota Kijang"}</p>
+                                <img src={data.image ? data.image : noImg} alt="cars" />
+                                <p className="title-cars">{data.name ? data.name : "Mobil"}</p>
                                 <h4>{formatRupiah(data.price)} / hari</h4>
                                 <p className="desc-cars">{data.desc ? data.desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aperiam et perspiciatis eveniet!"}</p>
-                                <Link to={`/detail-cars/${data.id}`}>
-                                    <button className="card-cars-btn">Pilih Mobil</button>
+                                <Link to={`/detail-car/${data.id}`}>
+                                    <button onClick={() => scroolToTop()} className="card-cars-btn">Pilih Mobil</button>
                                 </Link>
                             </div>
                         )
                     })
                 }
             </div>
+                <div className="pagination">
+                    <button className="pagination-btn" disabled={page === 1} onClick={handlePrevPage}>Prev</button>
+                    <p>{page}</p>
+                    <button disabled={dataCars.length === 0} className="pagination-btn" onClick={handleNextPage}>Next</button>
+                </div>
         </div>
     )
 }

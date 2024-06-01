@@ -50,8 +50,8 @@ export const dataTestimoni = [
     },
     {
         id: 4,
-        img: "./images/rusdicik.jpg",
-        title: "Dicky Simorangkir 40, Medan",
+        img: "./images/sumbul.jpg",
+        title: "gojo sitorus 40, Medan",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
         rate: "./images/Rate.png",
     },
@@ -128,3 +128,5 @@ export const garansi = [
     "Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam",
     "Tidak termasuk akomodasi penginapan"
 ]
+
+export const noImg = "./images/noImage.jpg"

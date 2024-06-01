@@ -109,12 +109,23 @@ select:focus {
     right: 0;
     left: 0;
     position: absolute;
-    height: 152%;
+    height: 151%;
     width: 100%;
     /* border: 1px solid red; */
     background-color:rgba(0, 0, 0, 0.61);
-    
-    
+}
+
+.overlay::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    height: 252%;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-color:rgba(0, 0, 0, 0.61);
 }
 
 @media screen and (max-width: 768px) {
@@ -135,16 +146,18 @@ select:focus {
         flex-direction: column;
         height: 100%;
         /* border: 1px solid red; */
+        border-radius: 0px 0px 0px 10px;
     }
     
     .search-cars {
+        border-radius: 0px;
         position: relative;
         z-index: 1;
         /* border: 1px solid black; */
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.13);
         padding-top: 20px;
         padding-bottom: 20px;
-        border-radius: 10px;
+        border-radius: 0px 0px 0px 10px;
         width: 100%;
         background-color: #FFFFFF;
         flex-direction: column;

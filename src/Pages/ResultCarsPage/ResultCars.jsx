@@ -11,14 +11,43 @@ const ResultCars = () => {
         setIsMenuOpen(!isMenuOpen)
     }
 
+    const [isFocused, setIsFocused] = useState(false);
+
+    const handleInputFocus = () => {
+        setIsFocused(true);
+    };
+
+    const handleInputBlur = () => {
+        setIsFocused(false);
+    };
+
+
+    const [nameCar, setNameCar] = useState('')
+    const [capacityCar, setCapacityCar] = useState('')
+    const [priceCar, setPriceCar] = useState('')
+    const [statusCar, setStatusCar] = useState('')
+
+
 
     return (
         <div>
-            <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} logoBtn={false}/>
-            <ResultCarsTable isOpen={isMenuOpen} btn={true} canModify={true}/>
-            <CardCars isOpen={isMenuOpen}/>
+            <Navbar isFocused={isFocused}
+            isOpen={isMenuOpen} toggleMenu={toggleMenu} setIsMenuOpen={setIsMenuOpen} logoBtn={false}/>
+
+            <ResultCarsTable 
+            handleInputBlur={handleInputBlur}
+            handleInputFocus={handleInputFocus}
+            isOpen={isMenuOpen} 
+            btn={true} 
+            canModify={true} 
+            nameCar={nameCar} capacityCar={capacityCar} priceCar={priceCar} statusCar={statusCar}
+            setNameCar={setNameCar} setCapacityCar={setCapacityCar} setPriceCar={setPriceCar} setStatusCar={setStatusCar}/>
+
+            <CardCars isFocused={isFocused}
+            nameCar={nameCar} capacityCar={capacityCar} priceCar={priceCar} statusCar={statusCar}
+            isOpen={isMenuOpen}/>
             <div style={{marginTop: "120px"}}>
-            <Footer isOpen={isMenuOpen}/>
+            <Footer isOpen={isMenuOpen} isFocused={isFocused}/>
             </div>
         </div>
     )
