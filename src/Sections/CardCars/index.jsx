@@ -81,7 +81,7 @@ const CardCars = ({ isOpen, nameCar, capacityCar, priceCar, statusCar, isFocused
                 <div className="pagination">
                     <button className="pagination-btn" disabled={page === 1} onClick={handlePrevPage}>Prev</button>
                     <p>{page}</p>
-                    <button disabled={dataCars.length === 0} className="pagination-btn" onClick={handleNextPage}>Next</button>
+                    <button disabled={dataCars.length < 9} className="pagination-btn" onClick={handleNextPage}>Next</button>
                 </div>
         </div>
     )
