@@ -7,7 +7,7 @@ const Footer = ({ isOpen, isFocused, inMenu }) => {
 
 
     return (
-        <div className={"footer-wrapper" + (isOpen ? " blur" : "") + (isFocused ? " " : "")}>
+        <div className={"footer-wrapper" + (isOpen ? " blur" : "") + (isFocused ? "" : "")}>
             <div className="footer-container">
                 <div className="footer-contact">
                     <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
