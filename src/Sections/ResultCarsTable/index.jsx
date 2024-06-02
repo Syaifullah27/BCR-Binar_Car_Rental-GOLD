@@ -1,13 +1,16 @@
 
+import { useContext } from "react";
 import "./resultTable.css"
+import { InputContext } from "../../inputContext";
 // eslint-disable-next-line react/prop-types
-const ResultCarsTable = ({ isOpen, btn, canModify, nameCar, capacityCar, priceCar, statusCar, setNameCar, setCapacityCar, setPriceCar, setStatusCar,
+const ResultCarsTable = ({ isOpen, btn, canModify,
     // eslint-disable-next-line react/prop-types
     detailName, detailCapacity, detailPrice,
     // eslint-disable-next-line react/prop-types
     handleInputBlur, handleInputFocus
 }) => {
 
+    const { nameCar, capacityCar, priceCar, statusCar, setNameCar, setCapacityCar, setPriceCar, setStatusCar } = useContext(InputContext);
 
 
     // untuk input value

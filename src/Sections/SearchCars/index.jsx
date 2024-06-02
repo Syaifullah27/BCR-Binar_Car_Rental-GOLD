@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import "./searchCars.css"
+import { InputContext } from "../../inputContext";
 
 // eslint-disable-next-line react/prop-types
-const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen, onSearch, nameCar, capacityCar, priceCar, statusCar, setNameCar, setCapacityCar, setPriceCar, setStatusCar }) => {
+const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen }) => {
 
+    const { nameCar, capacityCar, priceCar, statusCar, setNameCar, setCapacityCar, setPriceCar, setStatusCar } = useContext(InputContext);
 
 
     // untuk input value
@@ -27,13 +30,8 @@ const SearchCars = ({ handleInputFocus, handleInputBlur, isOpen, onSearch, nameC
 
 
 
-    const sendQueryAPI = () => {
-        onSearch({ nameCar, capacityCar, priceCar, statusCar })
-    }
-
     const handleButtonClick = (event) => {
         event.preventDefault();
-        sendQueryAPI();
         window.location.href = '/result-cars';
     }
 
