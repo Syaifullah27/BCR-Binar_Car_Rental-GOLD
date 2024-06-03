@@ -5,6 +5,7 @@ import ResultCars from "./Pages/ResultCarsPage/ResultCars"
 import DetailCars from "./Pages/DetailCarsPage/DetailCars"
 // import { useState } from "react"
 import { InputProvider } from "./inputContext"
+import NotFound from "./Pages/NotFound/404"
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/search-cars" element={<RentalsPage inMenu={true} />} />
           <Route path="/result-cars/" element={<ResultCars />} />
           <Route path="/detail-car/:id" element={<DetailCars />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       </InputProvider>
